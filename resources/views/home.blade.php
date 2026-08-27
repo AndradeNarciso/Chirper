@@ -11,7 +11,7 @@
             </h1>
 
             <p class="mt-1 text-gray-500">
-                Veja o que as pessoas estão a dizer.
+              See what people are saying.
             </p>
         </div>
 
