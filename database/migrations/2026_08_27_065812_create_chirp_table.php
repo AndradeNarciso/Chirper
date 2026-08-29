@@ -20,27 +20,6 @@ return new class extends Migration
         });
 
 
-
-      DB::table('chirps')->insert([
-            [
-                'user_id' => 1,
-                'message' => 'Hello everyone! This is my first chirp.',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'user_id' => 1,
-                'message' => 'I am learning Laravel and Eloquent!',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'user_id' => 2,
-                'message' => 'Laravel makes web development really enjoyable.',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-        ]);
     }
 
     /**
