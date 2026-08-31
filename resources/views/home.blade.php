@@ -32,7 +32,7 @@
                                         flex items-center justify-center
                                         text-white font-bold text-lg">
 
-                                {{ strtoupper(substr($chirp['autor'], 0, 1)) }}
+                                {{ strtoupper(substr($chirp->author, 0, 1)) }}
 
                             </div>
 
@@ -40,11 +40,11 @@
                             <div class="ml-3">
 
                                 <h2 class="font-semibold text-gray-900">
-                                    {{ $chirp['autor'] }}
+                                    {{ $chirp->author }}
                                 </h2>
 
                                 <p class="text-sm text-gray-500">
-                                    {{ $chirp['time'] }}
+                                    {{ $chirp->time }}
                                 </p>
 
                             </div>
@@ -64,7 +64,7 @@
                         <div class="mt-5">
 
                             <p class="text-gray-800 text-base leading-7">
-                                {{ $chirp['message'] }}
+                                {{ $chirp->message }}
                             </p>
 
                         </div>

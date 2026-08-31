@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mappers\ChirpMapper;
 use Illuminate\Http\Request;
 use App\Models\Chirp;
 
@@ -10,17 +11,14 @@ class ChirpController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function __construct(private ChirpMapper $chirperMapper) {}
+
     public function index()
     {
+        $chirps = Chirp::all();
+        $chirpsDto = $chirps->map(fn($chirps) => $this->chirperMapper->toDto($chirps));
 
-
-
-
-
-        return View('home',['chirps'=> Chirp::all()]);
-
-
-        //
+        return view('home', ['chirps' => $chirpsDto]);
     }
 
     /**
@@ -71,5 +69,3 @@ class ChirpController extends Controller
         //
     }
 }
-
-
