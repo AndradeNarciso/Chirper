@@ -15,7 +15,7 @@ class ChirpController extends Controller
 
     public function index()
     {
-        $chirps = Chirp::all();
+        $chirps = Chirp::latest()->take(50)->get();
         $chirpsDto = $chirps->map(fn($chirps) => $this->chirperMapper->toDto($chirps));
 
         return view('home', ['chirps' => $chirpsDto]);

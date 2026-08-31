@@ -17,7 +17,7 @@
 
         <div class="space-y-5">
 
-            @foreach ($chirps as $chirp)
+            @forelse ($chirps as $chirp)
 
                 <div class="bg-white border border-gray-200 rounded-xl shadow-sm
                             hover:shadow-md transition duration-200">
@@ -105,7 +105,9 @@
 
                 </div>
 
-            @endforeach
+                @empty
+                <p class="text-gray-500 text-center py-8">No chirps yet. Be the first to post!</p>
+            @endforelse
 
         </div>
 
