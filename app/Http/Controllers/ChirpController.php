@@ -34,7 +34,11 @@ class ChirpController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate(['message' => 'required|string|max:255|min:5',]);
+        $validated = $request->validate(['message' => 'required|string|max:255|min:5'], [
+            'message.required' => 'The message cannot be empty.',
+            'message.min'      => 'The message must have at least 5 characters.',
+            'message.max'      => 'The message cannot exceed 255 characters.',
+        ]);
 
         Chirp::create([
             'message' => $validated['message'],
