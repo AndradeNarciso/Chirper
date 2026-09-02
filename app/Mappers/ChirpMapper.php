@@ -16,7 +16,8 @@ class ChirpMapper
         return new ChirperDTO(
             author: $chirp->user ? $chirp->user->name : 'unknown',
             message: $chirp->message,
-            time: $chirp->updated_at
+            time: $chirp->updated_at,
+            id:$chirp->id
         );
     }
 }

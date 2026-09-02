@@ -1,7 +1,7 @@
 
 
 
-<form method="POST" action="/chirps"
+<form method="POST" action="{{ url('/v1/chirps') }}"
       class="w-full bg-white border border-gray-200 rounded-xl shadow-sm p-5">
 
     @csrf
