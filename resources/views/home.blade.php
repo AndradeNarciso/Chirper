@@ -5,6 +5,10 @@
 
     <div class="w-full max-w-2xl mx-auto mt-12 px-4">
 
+         <div class="mb-8">
+            <x-form />
+        </div>
+
         <div class="mb-8">
             <h1 class="text-3xl font-bold text-gray-900">
                 Chirps
@@ -44,7 +48,7 @@
                                 </h2>
 
                                 <p class="text-sm text-gray-500">
-                                    {{ $chirp->time }}
+                                    {{ $chirp->time->diffForHumans() }}
                                 </p>
 
                             </div>

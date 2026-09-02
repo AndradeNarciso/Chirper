@@ -41,6 +41,7 @@
 
 
     <main class="flex-1 flex justify-center">
+        
 
         {{ $slot }}
 
