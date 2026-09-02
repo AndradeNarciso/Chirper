@@ -5,6 +5,8 @@
 
     <div class="w-full max-w-2xl mx-auto mt-12 px-4">
 
+       
+
          <div class="mb-8">
             <x-form />
         </div>

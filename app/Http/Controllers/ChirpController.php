@@ -41,7 +41,7 @@ class ChirpController extends Controller
 
         ]);
 
-        return redirect('/')->with('Sucess', 'Chirp created');
+        return redirect('/')->with('success', 'Chirp created');
     }
 
     /**

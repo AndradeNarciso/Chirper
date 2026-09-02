@@ -1,3 +1,6 @@
+
+
+
 <form method="POST" action="/chirps"
       class="w-full bg-white border border-gray-200 rounded-xl shadow-sm p-5">
 
@@ -7,6 +10,12 @@
         <label for="message" class="block mb-2 text-sm font-semibold text-gray-700">
             What's on your mind?
         </label>
+        
+        @if (session('success'))
+            <div class="mb-6 p-4 text-sm text-green-700 bg-green-100 rounded-lg">
+                {{ session('success') }}
+            </div>
+        @endif
 
         <textarea
             id="message"
